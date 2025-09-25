@@ -1,0 +1,94 @@
+/* Fondo general */
+body {
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card calculadora */
+.calculator-card {
+  background-color: #222222;
+  color: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  text-align: center;
+}
+
+/* Título */
+.calculator-card h1 {
+  margin-bottom: 20px;
+  color: #1cc88a;
+}
+
+/* Display resultado */
+.display {
+  margin-bottom: 15px;
+}
+.display input {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  text-align: right;
+  background: #ffffff;
+  color: #0f0;
+  border: none;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+/* Inputs numéricos */
+.inputs {
+  margin-bottom: 15px;
+}
+.inputs label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.inputs input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Botones */
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.buttons-grid input[type="button"] {
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  background-color: #444;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.buttons-grid input[type="button"]:hover {
+  background-color: #666;
+  transform: scale(1.05);
+}
+
+/* Botón limpiar */
+.buttons-grid input.clear {
+  background-color: #e74a3b;
+}
+.buttons-grid input.clear:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="../style/style-calculadora.css">
+</head>
+<body>
+  <div class="calculator-card">
+    <h1>Calculadora</h1>
+    <div class="display">
+      <label for="resultado">Resultado:</label>
+      <input type="text" id="resultado" name="resultado" readonly>
+    </div>
+    <div class="inputs">
+      <label for="num1">Número 1:</label>
+      <input type="text" id="num1" name="num1">
+
+      <label for="num2">Número 2:</label>
+      <input type="text" id="num2" name="num2">
+    </div>
+
+    <div class="buttons-grid">
+      <input type="button" value="+" onclick="suma()">
+      <input type="button" value="-" onclick="resta()">
+      <input type="button" value="×" onclick="multiplicacion()">
+      <input type="button" value="÷" onclick="division()">
+      <input type="button" value="x²" onclick="cuadrado()">
+      <input type="button" value="C" class="clear" onclick="limpiar()">
+    </div>
+  </div>
+
+  <script>
+    function suma(){
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var resultado = num1 + num2;
+      document.getElementById("resultado").value = resultado;
+    }
+    function resta(){
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var resultado = num1 - num2;
+      document.getElementById("resultado").value = resultado;
+    }
+    function multiplicacion(){
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var resultado = num * num2;
+      document.getElementById("resultado").value = resultado;
+    }
+    function division(){
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var num2 = parseFloat(document.getElementById("num2").value);
+      var resultado = num1 / num2;
+      document.getElementById("resultado").value = resultado;
+    }
+    function cuadrado(){
+      var num1 = parseFloat(document.getElementById("num1").value);
+      var resultado = num1 * num1;
+      document.getElementById("resultado").value = resultado;
+    }
+    function limpiar(){
+      document.getElementById("num1").value = "";
+      document.getElementById("num2").value = "";
+      document.getElementById("resultado").value = "";
+    }
+  </script>
+</body>
+</html>
